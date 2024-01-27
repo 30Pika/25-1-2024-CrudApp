@@ -6,6 +6,7 @@ const AddProduct = () => {
     const [name, setname] = useState("");
     const [price, setprice] = useState("");
     const [category, setcategory] = useState("");
+    const [subcategory, setsubcategory] = useState("");
     const [company, setcompany] = useState("");
     const [quntity, setquntity] = useState("");
 
@@ -19,13 +20,14 @@ const AddProduct = () => {
                 name: name,
                 price: price,
                 category: category,
+                subcategory: subcategory,
                 userId: userId,
                 company: company,
                 quntity: quntity
             }).then((res) => {
                 if (res.data) {
                     alert("Add Product Successfully...");
-                    setname(""); setprice(""); setcategory(""); setcompany("");
+                    setname(""); setprice(""); setcategory(""); setcompany(""); setsubcategory("");
                 }
             }).catch((err) => {
                 console.log(`Error From Add Product Page ${err}`);
@@ -45,6 +47,8 @@ const AddProduct = () => {
                             <input type="text" placeholder='Product Price' onChange={(e) => setprice(e.target.value)}
                                 className='form-control mb-3 fw-bold shadow border-3' />
                             <input type="text" placeholder='Product Category' onChange={(e) => setcategory(e.target.value)}
+                                className='form-control mb-3 fw-bold shadow border-3' />
+                            <input type="text" placeholder='Product Sub-Category' onChange={(e) => setsubcategory(e.target.value)}
                                 className='form-control mb-3 fw-bold shadow border-3' />
                             <input type="text" placeholder='Product Company' onChange={(e) => setcompany(e.target.value)}
                                 className='form-control mb-3 fw-bold shadow border-3' />

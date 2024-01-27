@@ -48,7 +48,7 @@ const ProductList = () => {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <h1 className='text-center'>Product</h1>
+                        <h1 className='text-center'>Products</h1>
                         <div className="d-flex flex-row mb-3">
                             <input type="text" placeholder='Search' onChange={Search} value={Empty}
                                 className='p-1 w-25 border-3 text-info fs-5 fw-bold me-1' />

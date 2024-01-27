@@ -78,6 +78,7 @@ const StoreBuyProduct = () => {
                       <Link to="/ConfirmBuy"><button type="submit" className='btn btn-primary '
                         onClick={() => ConfirmBuy()}>
                         Confirm Buy</button></Link>
+                      <Link to="/"><button className='btn btn-danger'>Cancel</button></Link>
                     </div>
                   </div>
                 </div>

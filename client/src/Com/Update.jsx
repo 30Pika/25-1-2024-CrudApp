@@ -7,6 +7,7 @@ const Update = () => {
     const [price, setprice] = useState("");
     const [quntity, setquntity] = useState("");
     const [category, setcategory] = useState("");
+    const [subcategory, setsubcategory] = useState("");
     const [company, setcompany] = useState("");
     const [id, setId] = useState(0);
 
@@ -16,6 +17,7 @@ const Update = () => {
         setprice(localStorage.getItem("price"));
         setquntity(localStorage.getItem("quntity"));
         setcategory(localStorage.getItem("category"));
+        setsubcategory(localStorage.getItem("subcategory"));
         setcompany(localStorage.getItem("company"));
     }, [])
 
@@ -29,11 +31,12 @@ const Update = () => {
                 price: price,
                 quntity: quntity,
                 category: category,
+                subcategory: subcategory,
                 company: company
             }).then((res) => {
                 if (res.data) {
                     alert("Add Product Successfully...");
-                    setname(""); setprice(""); setcategory(""); setcompany(""); setquntity("");
+                    setname(""); setprice(""); setcategory(""); setsubcategory(""); setcompany(""); setquntity("");
                     // localStorage.clear("id"); localStorage.clear("name");
                     // localStorage.clear("price"); localStorage.clear("category");
                     // localStorage.clear("compnay");
@@ -48,7 +51,7 @@ const Update = () => {
         <>
             <div className="container-fluid ">
                 <div className="row">
-                    <div className="col-md-5 offset-md-3 mt-5 border border-2 border-dark rounded">
+                    <div className="col-md-5 offset-md-3 mt-1 border border-2 border-dark rounded">
                         <form onSubmit={handleform}>
                             <h1 className='text-center'>UpDate Product</h1>
                             <label className='fw-bold ms-2 text-info'>Product Name :-</label>
@@ -59,6 +62,9 @@ const Update = () => {
                                 className='form-control mb-3 fw-bold shadow border-3' />
                             <label className='fw-bold ms-2 text-info'>Product Category :-</label>
                             <input type="text" value={category} onChange={(e) => setcategory(e.target.value)}
+                                className='form-control mb-3 fw-bold shadow border-3' />
+                            <label className='fw-bold ms-2 text-info'>Product Sub-Category :-</label>
+                            <input type="text" value={subcategory} onChange={(e) => setsubcategory(e.target.value)}
                                 className='form-control mb-3 fw-bold shadow border-3' />
                             <label className='fw-bold ms-2 text-info'>Product Company :-</label>
                             <input type="text" value={company} onChange={(e) => setcompany(e.target.value)}

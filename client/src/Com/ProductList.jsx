@@ -26,12 +26,13 @@ const ProductList = () => {
                 console.log(`Error Form Product Delete function ${err}`);
             })
     }
-    const Update = (id, name, price, quntity, category, company) => {
+    const Update = (id, name, price, quntity, category, subcategory, company) => {
         localStorage.setItem("id", id);
         localStorage.setItem("name", name);
         localStorage.setItem("price", price);
         localStorage.setItem("quntity", quntity);
         localStorage.setItem("category", category);
+        localStorage.setItem("category", subcategory);
         localStorage.setItem("company", company);
     }
 
@@ -75,6 +76,7 @@ const ProductList = () => {
                                     <th scope="col">Price</th>
                                     <th scope="col">Quntity</th>
                                     <th scope="col">Category</th>
+                                    <th scope="col">Sub-Category</th>
                                     <th scope="col">Compnay</th>
                                     <th scope="col">Edit</th>
                                     <th scope="col">Delete</th>
@@ -91,9 +93,10 @@ const ProductList = () => {
                                                     <td>{itm.price}</td>
                                                     <td>{itm.quntity}</td>
                                                     <td>{itm.category}</td>
+                                                    <td>{itm.subcategory}</td>
                                                     <td>{itm.company}</td>
                                                     <td><Link to="/Update"
-                                                        onClick={() => Update(itm._id, itm.name, itm.price, itm.quntity, itm.category, itm.company)}>
+                                                        onClick={() => Update(itm._id, itm.name, itm.price, itm.quntity, itm.category, itm.subcategory, itm.company)}>
                                                         <i class='bx bx-edit-alt fs-4 text-info'></i></Link></td>
                                                     <td onClick={() => { if (window.confirm("Are You Sure To Delete Data...!")) { Delete(itm._id) } }}
                                                     ><i className='bx bx-trash fs-4 text-danger'></i></td>

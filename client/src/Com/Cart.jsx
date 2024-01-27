@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import bag from "../img/bag.jpg";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -26,7 +27,14 @@ const Cart = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h1 className='text-center'>Buy Product List</h1>
+            <div className='d-flex justify-content-center position-relative '>
+              <div className='position-absolute top-0 start-0 fs-2 fw-bold'>
+                <Link to="/" className='text-decoration-none text-dark'>
+                  <i class='bx bx-left-arrow-alt'>Back</i>
+                </Link>
+              </div>
+              <h1 className='text-center'>Buy Product List</h1>
+            </div>
             <div className="d-flex flex-wrap justify-content-center shadow">
               {
                 data.map((itm, index) => {

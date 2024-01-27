@@ -19,11 +19,11 @@ function App() {
           <Route path="/AddProduct" element={<AddProduct />}></Route>
           <Route path="/ProductList" element={<ProductList />}></Route>
           <Route path="/Update" element={<Update />}></Route>
-          <Route path="/Buy" element={<Buy />}></Route>
           <Route path="/Cart" element={<Cart />}></Route>
           <Route path="/ConfirmBuy" element={<ConfirmBuy />}></Route>
           <Route path="/Logout" element={<h1>Logout</h1>}></Route>
         </Route>
+        <Route path="/" element={<Buy />}></Route>
         <Route path="/Register" element={<Register />}></Route>
         <Route path="/Login" element={<Login />}></Route>
       </Routes>
