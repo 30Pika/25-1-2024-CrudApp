@@ -18,12 +18,16 @@ const Navbar = () => {
                         <span className="navbar-brand fs-3 text-decoration-line-through">
                             E-Commerce Website</span>
                     </div>
-                    <div className="col-md-5 offset-md-3 justify-content-end">
+                    <div className="col-md-5 offset-md-6 justify-content-end">
                         <div className="collapse navbar-collapse " id="navbarNavDropdown">
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
-                                    <Link style={{ width: "125px" }} className="nav-link text-white fs-5"
-                                        to="/"></Link>
+                                    <Link style={{ width: "70px" }} className="nav-link text-white fs-5"
+                                        to="/">Home</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link style={{ width: "80px" }} className="nav-link text-white fs-5"
+                                        to="/Buy">Porduct</Link>
                                 </li>
                                 {
                                     auth ?

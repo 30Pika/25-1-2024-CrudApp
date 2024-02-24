@@ -9,6 +9,7 @@ import Update from "./Com/Update";
 import Buy from "./Com/Buy";
 import Cart from "./Com/Cart";
 import ConfirmBuy from "./Com/ConfirmBuy";
+import Home from "./Com/Home";
 function App() {
 
   return (
@@ -23,7 +24,8 @@ function App() {
           <Route path="/ConfirmBuy" element={<ConfirmBuy />}></Route>
           <Route path="/Logout" element={<h1>Logout</h1>}></Route>
         </Route>
-        <Route path="/" element={<Buy />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/Buy" element={<Buy />}></Route>
         <Route path="/Register" element={<Register />}></Route>
         <Route path="/Login" element={<Login />}></Route>
       </Routes>
